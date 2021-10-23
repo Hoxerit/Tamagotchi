@@ -1,0 +1,72 @@
+body{
+    overflow: hidden;
+    background-color: #EDCFFF;
+    font-family: Pixel Digivolve;
+}
+
+@font-face {
+    font-family: 'Pixel Digivolve' ;
+    src: url(./Imagens/pixel_digivolve/Pixel\ Digivolve.otf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+#titulo{
+    font-family: Pixel Digivolve;
+    text-align: center; 
+}
+
+#blocoCaractere{
+    justify-content: center;
+    display:grid;
+}
+
+#gabumon{
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+#blocoImagem {
+    display:flex;
+    justify-content: center;
+}
+
+.blocoBotao{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}    
+
+
+.botao{
+    padding: 6px ;
+    width: 15%;
+    display: inline-block;
+    margin-top: 8px;
+    background: rgb(40, 145, 243);
+    border-radius: 10px;
+    color: #f2f2f2;
+    cursor:pointer;
+    box-shadow: 8px 8px 8px #888888;
+    border-width: 1px;   
+    font-family: Pixel Digivolve; 
+}
+
+.botao:hover{
+    background: rgb(123, 183, 240);
+    transition: 300ms;
+}
+
+.barra{
+    width: 100px;
+    background: #99cc00;
+    margin: 5px 10px;
+    border-radius: 4px;
+    padding: 3px 3px;
+}
+
+.lado{
+    float: left;
+    margin: 10px 25px;
+    width: 120px;
+}
