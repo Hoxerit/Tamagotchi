@@ -70,3 +70,7 @@ body{
     margin: 10px 25px;
     width: 120px;
 }
+
+#mensagem{
+    color: red;
+}
