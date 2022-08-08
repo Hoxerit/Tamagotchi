@@ -1,14 +1,13 @@
 var fome = 100;
-var higiene = 100;
 var sono = 100;
 var diversao = 100;
 var social = 100;
 
-function Loop(time = 2){
-    var total = fome + higiene + sono + diversao + social;
+function Loop(time = 1){
+    var total = fome + sono + diversao + social;
 
-    if(fome <= 0 || higiene <= 0 || sono <= 0 || diversao <= 0 || social <= 0) {
-        document.getElementById('blocoImagem').innerHTML = 'Você deixou seu amadotchi morrer, tente novamente (atualize a página)'
+    if(fome <= 0 || sono <= 0 || diversao <= 0 || social <= 0) {
+        document.getElementById('blocoImagem').innerHTML = 'Você deixou seu dragão morrer, tente novamente (atualize a página)'
     }else if(total > 400){
         document.getElementById("gabumon").style.backgroundColor = "aqua"
     }else if(total > 300){
@@ -22,14 +21,12 @@ function Loop(time = 2){
     }
 
     fome = fome - parseInt(time);
-    higiene = higiene - parseInt(time);
     sono = sono - parseInt(time);
     diversao = diversao - parseInt(time);
     social = social - parseInt(time);
 
 
     document.getElementById('fome').innerHTML = fome + '%'
-    document.getElementById('higiene').innerHTML = higiene + '%'
     document.getElementById('sono').innerHTML = sono + '%'
     document.getElementById('diversão').innerHTML = diversao + '%'
     document.getElementById('social').innerHTML = social + '%'
@@ -37,19 +34,13 @@ function Loop(time = 2){
 }
 
 function Start() {
-    var temporizador = setInterval(Loop, 1000);
+    var temporizador = setInterval(Loop, 5000);
 }
 
 function Comer() {
     fome = 100;
     document.getElementById('fome').innerHTML = fome + '%';
     document.getElementById('fome').style.width = fome + 'px';
-}
-
-function Banho() {
-    higiene = 100;
-    document.getElementById('higiene').innerHTML = higiene + '%';
-    document.getElementById('higiene').style.width = higiene + 'px';
 }
 
 function Dormir() {
